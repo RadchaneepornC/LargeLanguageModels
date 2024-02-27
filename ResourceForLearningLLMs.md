@@ -14,3 +14,7 @@
 ### Quantization techniques
 - [Siddharth vij's LLM Quantization | GPTQ | QAT | AWQ | GGUF | GGML | PTQ ](https://medium.com/@siddharth.vij10/llm-quantization-gptq-qat-awq-gguf-ggml-ptq-2e172cd1b3b5)
 - [Maarten Grootendorst's Which Quantization Method is Right for You? (GPTQ vs. GGUF vs. AWQ)](https://www.youtube.com/watch?app=desktop&v=mNE_d-C82lI&embeds_referring_euri=https%3A%2F%2Fmaartengrootendorst.substack.com%2F&feature=emb_imp_woyt)
+
+### To-Read Publication
+- [T-RAG: LESSONS FROM THE LLM TRENCHES](https://arxiv.org/pdf/2402.07483.pdf)
+- [LoRA+](https://arxiv.org/abs/2402.12354)
