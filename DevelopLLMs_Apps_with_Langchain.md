@@ -39,6 +39,55 @@ print(output)
 
 ```python .invoke()``` is the method for predicting using an LLMs
 
+**<li>Prompt templates and chaining</li>**
+- Prompt template: used for creating prompts in a more modular way, so they can be reused and built on
+- Chain: act as the glue in LangChain, bringing the other components together into workflows that pass inputs and outputs between the different components
+  
+```python
+# Set your Hugging Face API token
+huggingfacehub_api_token = '<HUGGING_FACE_TOKEN>'
+
+# Create a prompt template from the template string
+template = "You are an artificial intelligence assistant, answer the question. {question}"
+prompt = PromptTemplate(template=template, input_variables=["question"])
+
+# Create a chain to integrate the prompt template and LLM
+llm = HuggingFaceHub(repo_id='tiiuae/falcon-7b-instruct', huggingfacehub_api_token=huggingfacehub_api_token)
+llm_chain = LLMChain(prompt=prompt, llm=llm)
+
+question = "How does LangChain make LLM application development easier?"
+print(llm_chain.run(question))
+
+```
+**<li>Chat prompt templates</li>**
+
+```python
+
+# Set your API Key from OpenAI
+openai_api_key= '<OPENAI_API_TOKEN>'
+
+# Define an OpenAI chat model
+llm = ChatOpenAI(temperature=0, openai_api_key=openai_api_key)		
+
+# Create a chat prompt template
+prompt_template = ChatPromptTemplate.from_messages(
+    [
+        ("system", "You are a helpful assistant."),
+        ("human", "Respond to question: {question}")
+    ]
+)
+
+# Insert a question into the template and call the model
+full_prompt = prompt_template.format_messages(question='How can I retain learning?')
+llm(full_prompt)
+```
+
+
+
+
+
+
+
 
 </details>
 
