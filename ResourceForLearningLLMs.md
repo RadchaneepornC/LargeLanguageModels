@@ -16,14 +16,15 @@
 - [Fine-tune Falcon-7B on Your GPU with TRL and QLoRa](https://medium.com/@bnjmn_marie/fine-tune-falcon-7b-on-your-gpu-with-trl-and-qlora-4490fadc3fbb)
 - [Mistral 7B: Recipes for Fine-tuning and Quantization on Your Computer](https://medium.com/towards-data-science/mistral-7b-recipes-for-fine-tuning-and-quantization-on-your-computer-631401583f77)
 - [Don't Merge Your LoRA Adapter Into a 4-bit LLM](https://kaitchup.substack.com/p/dont-merge-your-lora-adapter-into?source=post_page-----2216ffcdc27b--------------------------------)
+- [Finetune Mistral](https://www.kaggle.com/code/simonstorf/finetune-mistral)
 
 ### Quantization techniques
 - [Siddharth vij's LLM Quantization | GPTQ | QAT | AWQ | GGUF | GGML | PTQ ](https://medium.com/@siddharth.vij10/llm-quantization-gptq-qat-awq-gguf-ggml-ptq-2e172cd1b3b5)
 - [Maarten Grootendorst's Which Quantization Method is Right for You? (GPTQ vs. GGUF vs. AWQ)](https://www.youtube.com/watch?app=desktop&v=mNE_d-C82lI&embeds_referring_euri=https%3A%2F%2Fmaartengrootendorst.substack.com%2F&feature=emb_imp_woyt)
 
 ### RAG tutorial
--[Building long context RAG with RAPTOR from scratch](https://youtu.be/jbGchdTL7d0?si=QOGwTfPiIF3e-Rom)
--[Advanced RAG series: Indexing](https://div.beehiiv.com/p/advanced-rag-series-indexing)
+- [Building long context RAG with RAPTOR from scratch](https://youtu.be/jbGchdTL7d0?si=QOGwTfPiIF3e-Rom)
+- [Advanced RAG series: Indexing](https://div.beehiiv.com/p/advanced-rag-series-indexing)
 
 
 
@@ -33,4 +34,4 @@
 
 ### Source code about data preprocessing
 - [Construct dataset](https://github.com/avisoori-databricks/Tuning-the-Finetuning/blob/main/Step%200%20Constructing%20the%20dataset.py)
-- 
+  
