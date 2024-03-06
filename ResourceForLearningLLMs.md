@@ -10,11 +10,27 @@
 ### Finetuning techniques
 - [Akshay Pachaar's Understanding LoRA: Low-rank Adaption of Large Language Models](https://mlspring.beehiiv.com/p/understanding-lora-lowrank-adaption-large-language-models)
 - [Ali Mobarekati's Fine-Tuning Mistral 7b in Google Colab with QLoRA (complete guide)](https://medium.com/@codersama/fine-tuning-mistral-7b-in-google-colab-with-qlora-complete-guide-60e12d437cca)
+- [Efficient Fine-Tuning with LoRA: A Guide to Optimal Parameter Selection for Large Language Models](https://www.databricks.com/blog/efficient-fine-tuning-lora-guide-llms) + [Source code](https://www.databricks.com/blog/efficient-fine-tuning-lora-guide-llms)
+- [Supervised fine-tuning (SFT) of an LLM](https://github.com/NielsRogge/Transformers-Tutorials/blob/master/Mistral/Supervised_fine_tuning_(SFT)_of_an_LLM_using_Hugging_Face_tooling.ipynb)
+- [Fine Tune Large Language Model (LLM) on a Custom Dataset with QLoRA](https://medium.com/@dassum/fine-tune-large-language-model-llm-on-a-custom-dataset-with-qlora-fb60abdeba07)
+- [Fine-tune Falcon-7B on Your GPU with TRL and QLoRa](https://medium.com/@bnjmn_marie/fine-tune-falcon-7b-on-your-gpu-with-trl-and-qlora-4490fadc3fbb)
+- [Mistral 7B: Recipes for Fine-tuning and Quantization on Your Computer](https://medium.com/towards-data-science/mistral-7b-recipes-for-fine-tuning-and-quantization-on-your-computer-631401583f77)
+- [Don't Merge Your LoRA Adapter Into a 4-bit LLM](https://kaitchup.substack.com/p/dont-merge-your-lora-adapter-into?source=post_page-----2216ffcdc27b--------------------------------)
 
 ### Quantization techniques
 - [Siddharth vij's LLM Quantization | GPTQ | QAT | AWQ | GGUF | GGML | PTQ ](https://medium.com/@siddharth.vij10/llm-quantization-gptq-qat-awq-gguf-ggml-ptq-2e172cd1b3b5)
 - [Maarten Grootendorst's Which Quantization Method is Right for You? (GPTQ vs. GGUF vs. AWQ)](https://www.youtube.com/watch?app=desktop&v=mNE_d-C82lI&embeds_referring_euri=https%3A%2F%2Fmaartengrootendorst.substack.com%2F&feature=emb_imp_woyt)
 
+### RAG tutorial
+-[Building long context RAG with RAPTOR from scratch](https://youtu.be/jbGchdTL7d0?si=QOGwTfPiIF3e-Rom)
+-[Advanced RAG series: Indexing](https://div.beehiiv.com/p/advanced-rag-series-indexing)
+
+
+
 ### To-Read Publication
 - [T-RAG: LESSONS FROM THE LLM TRENCHES](https://arxiv.org/pdf/2402.07483.pdf)
 - [LoRA+](https://arxiv.org/abs/2402.12354)
+
+### Source code about data preprocessing
+- [Construct dataset](https://github.com/avisoori-databricks/Tuning-the-Finetuning/blob/main/Step%200%20Constructing%20the%20dataset.py)
+- 
