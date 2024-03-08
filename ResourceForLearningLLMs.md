@@ -17,6 +17,7 @@
 - [Mistral 7B: Recipes for Fine-tuning and Quantization on Your Computer](https://medium.com/towards-data-science/mistral-7b-recipes-for-fine-tuning-and-quantization-on-your-computer-631401583f77)
 - [Don't Merge Your LoRA Adapter Into a 4-bit LLM](https://kaitchup.substack.com/p/dont-merge-your-lora-adapter-into?source=post_page-----2216ffcdc27b--------------------------------)
 - [Finetune Mistral](https://www.kaggle.com/code/simonstorf/finetune-mistral)
+- [LLM Instruction Finetuning + WandB](https://www.kaggle.com/code/hinepo/llm-instruction-finetuning-wandb)
 
 ### Quantization techniques
 - [Siddharth vij's LLM Quantization | GPTQ | QAT | AWQ | GGUF | GGML | PTQ ](https://medium.com/@siddharth.vij10/llm-quantization-gptq-qat-awq-gguf-ggml-ptq-2e172cd1b3b5)
