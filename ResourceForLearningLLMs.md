@@ -39,4 +39,6 @@
 
 ### Source code about data preprocessing
 - [Construct dataset](https://github.com/avisoori-databricks/Tuning-the-Finetuning/blob/main/Step%200%20Constructing%20the%20dataset.py)
-  
+
+### Good community
+- [RedditLocalLLaMA](https://www.reddit.com/r/LocalLLaMA/)
