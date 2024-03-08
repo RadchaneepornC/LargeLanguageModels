@@ -27,7 +27,11 @@
 - [Building long context RAG with RAPTOR from scratch](https://youtu.be/jbGchdTL7d0?si=QOGwTfPiIF3e-Rom)
 - [Advanced RAG series: Indexing](https://div.beehiiv.com/p/advanced-rag-series-indexing)
 
-
+### To-Read articles
+- [Don't Merge Your LoRA Adapter Into a 4-bit LLM](https://kaitchup.substack.com/p/dont-merge-your-lora-adapter-into?source=post_page-----2216ffcdc27b--------------------------------)
+- [LoRA: Load and Merge Your Adapters with Care](https://medium.com/@bnjmn_marie/lora-load-and-merge-your-adapters-with-care-3204119f0426)
+- [Compression Techniques for LLMs](https://medium.com/@bnjmn_marie/compression-techniques-for-llms-4eba6a6e622c)
+- [GPTQ or bitsandbytes: Which Quantization Method to Use for LLMs — Examples with Llama 2](https://towardsdatascience.com/gptq-or-bitsandbytes-which-quantization-method-to-use-for-llms-examples-with-llama-2-f79bc03046dc)
 
 ### To-Read Publication
 - [T-RAG: LESSONS FROM THE LLM TRENCHES](https://arxiv.org/pdf/2402.07483.pdf)
