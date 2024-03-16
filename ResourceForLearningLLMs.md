@@ -5,6 +5,7 @@
 - [mlabonne's Course to get into Large Language Models (LLMs) with roadmaps and Colab notebooks](https://github.com/mlabonne/llm-course)
 - [The Novice's LLM Training Guide written by Alpin](https://rentry.org/llm-training#the-basics)
 - [Benedict Neo's Roadmap to Learn AI in 2024](https://medium.com/bitgrit-data-science-publication/a-roadmap-to-learn-ai-in-2024-cc30c6aa6e16)
+- [Thomas@HuggingFace's A little guide to building Large Language Models in 2024](https://docs.google.com/presentation/d/1IkzESdOwdmwvPxIELYJi8--K3EZ98_cL6c5ZcLKSyVg/edit#slide=id.p)
 
 
 ### Finetuning techniques
