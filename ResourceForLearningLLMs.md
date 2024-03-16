@@ -26,6 +26,7 @@
 ### RAG tutorial
 - [Building long context RAG with RAPTOR from scratch](https://youtu.be/jbGchdTL7d0?si=QOGwTfPiIF3e-Rom)
 - [Advanced RAG series: Indexing](https://div.beehiiv.com/p/advanced-rag-series-indexing)
+- [Local Retrieval Augmented Generation (RAG) from Scratch (big tutorial)](https://www.youtube.com/watch?v=qN_2fnOPY-M)
 
 ### To-Read articles
 - [Don't Merge Your LoRA Adapter Into a 4-bit LLM](https://kaitchup.substack.com/p/dont-merge-your-lora-adapter-into?source=post_page-----2216ffcdc27b--------------------------------)
