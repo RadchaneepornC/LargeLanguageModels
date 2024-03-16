@@ -43,6 +43,6 @@
 - [Construct dataset](https://github.com/avisoori-databricks/Tuning-the-Finetuning/blob/main/Step%200%20Constructing%20the%20dataset.py)
 
 ### Good playlist
--[LLM is all you need](http://www.youtube.com/playlist?list=PL-oZj9xqG7m8yOZdo3ipcQ2-p92Y5qG9Q)
+- [PakapongZa's LLM is all you need](http://www.youtube.com/playlist?list=PL-oZj9xqG7m8yOZdo3ipcQ2-p92Y5qG9Q)
 ### Good community
 - [RedditLocalLLaMA](https://www.reddit.com/r/LocalLLaMA/)
