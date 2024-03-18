@@ -47,3 +47,6 @@
 - [PakapongZa's LLM is all you need](http://www.youtube.com/playlist?list=PL-oZj9xqG7m8yOZdo3ipcQ2-p92Y5qG9Q)
 ### Good community
 - [RedditLocalLLaMA](https://www.reddit.com/r/LocalLLaMA/)
+
+### Generative AI paper (for futher literature review)
+- [The Potential of Generative Artificial Intelligence Across Disciplines: Perspectives and Future Directions](https://www.tandfonline.com/doi/full/10.1080/08874417.2023.2261010?fbclid=IwAR1w9QK4iNqCduK9g6l61OpQRMlQLqG2hmPb1sM5QYsdLrge0JAqBwbCDVw)
