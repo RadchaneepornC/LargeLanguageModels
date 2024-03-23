@@ -19,6 +19,10 @@
 - [Don't Merge Your LoRA Adapter Into a 4-bit LLM](https://kaitchup.substack.com/p/dont-merge-your-lora-adapter-into?source=post_page-----2216ffcdc27b--------------------------------)
 - [Finetune Mistral](https://www.kaggle.com/code/simonstorf/finetune-mistral)
 - [LLM Instruction Finetuning + WandB](https://www.kaggle.com/code/hinepo/llm-instruction-finetuning-wandb)
+- [Fine Tuning LLM: Parameter Efficient Fine Tuning (PEFT) — LoRA & QLoRA — Part 2](https://abvijaykumar.medium.com/fine-tuning-llm-parameter-efficient-fine-tuning-peft-lora-qlora-part-2-d8e23877ac6f)
+
+### LLM hyperparameter tuning
+- [Tuning parameters to train LLMs (Large Language Models)](https://medium.com/@rtales/tuning-parameters-to-train-llms-large-language-models-8861bbc11971)
 
 ### Inference 
 - [LLM Inference on multiple GPUs with 🤗 Accelerate](https://medium.com/@geronimo7/llms-multi-gpu-inference-with-accelerate-5a8333e4c5db)
@@ -32,6 +36,7 @@
 - [Advanced RAG series: Indexing](https://div.beehiiv.com/p/advanced-rag-series-indexing)
 - [Local Retrieval Augmented Generation (RAG) from Scratch (big tutorial)](https://www.youtube.com/watch?v=qN_2fnOPY-M)
 - [hymie122 RAG-Survey](https://github.com/hymie122/rag-survey?fbclid=IwAR3aEDP6gqky7SBR3Whi-7PiDmcybWGAhkLkPDtBocjX3B57KcMbZX1Qax4)
+- [RAG for long context LLMs](https://youtu.be/SsHUNfhF32s?si=H9SE2IyGrOrsXg63)
 
 ### To-Read articles
 - [Don't Merge Your LoRA Adapter Into a 4-bit LLM](https://kaitchup.substack.com/p/dont-merge-your-lora-adapter-into?source=post_page-----2216ffcdc27b--------------------------------)
