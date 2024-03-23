@@ -57,5 +57,8 @@
 ### Good community
 - [RedditLocalLLaMA](https://www.reddit.com/r/LocalLLaMA/)
 
+### Interesting usecases tutorials
+- [Q/A chatbot with LLMs + Harry Potter](https://www.kaggle.com/code/hinepo/q-a-chatbot-with-llms-harry-potter)
+
 ### Generative AI paper (for futher literature review)
 - [The Potential of Generative Artificial Intelligence Across Disciplines: Perspectives and Future Directions](https://www.tandfonline.com/doi/full/10.1080/08874417.2023.2261010?fbclid=IwAR1w9QK4iNqCduK9g6l61OpQRMlQLqG2hmPb1sM5QYsdLrge0JAqBwbCDVw)
