@@ -22,6 +22,9 @@
 - [Fine Tuning LLM: Parameter Efficient Fine Tuning (PEFT) — LoRA & QLoRA — Part 2](https://abvijaykumar.medium.com/fine-tuning-llm-parameter-efficient-fine-tuning-peft-lora-qlora-part-2-d8e23877ac6f)
 - [Fine-tune Llama 2 for sentiment analysis](https://www.kaggle.com/code/lucamassaron/fine-tune-llama-2-for-sentiment-analysis/log)
 
+### Evaluation metric
+- [LLMs — Fine-tuning and Model Evaluation](https://ritikjain51.medium.com/llms-fine-tuning-and-evaluation-f019515b1c67)
+
 ### LLM hyperparameter tuning
 - [Tuning parameters to train LLMs (Large Language Models)](https://medium.com/@rtales/tuning-parameters-to-train-llms-large-language-models-8861bbc11971)
 
