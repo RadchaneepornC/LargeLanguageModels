@@ -22,6 +22,12 @@
 - [Fine Tuning LLM: Parameter Efficient Fine Tuning (PEFT) — LoRA & QLoRA — Part 2](https://abvijaykumar.medium.com/fine-tuning-llm-parameter-efficient-fine-tuning-peft-lora-qlora-part-2-d8e23877ac6f)
 - [Fine-tune Llama 2 for sentiment analysis](https://www.kaggle.com/code/lucamassaron/fine-tune-llama-2-for-sentiment-analysis/log)
 
+### Loss function LLMs used when finetuning
+- [Language Model Training and Inference: From Concept to Code](https://cameronrwolfe.substack.com/p/language-model-training-and-inference#§understanding-next-token-prediction)
+- [What is Loss Function: LLMs Explained](https://www.chatgptguide.ai/2024/02/29/what-is-loss-function-llms-explained/)
+- [Cross Entropy in Large Language Models (LLMs)](https://medium.com/ai-assimilating-intelligence/cross-entropy-in-large-language-models-llms-4f1c842b5fca)
+
+
 ### Evaluation metric
 - [LLMs — Fine-tuning and Model Evaluation](https://ritikjain51.medium.com/llms-fine-tuning-and-evaluation-f019515b1c67)
 
