@@ -22,6 +22,7 @@
 - [Fine Tuning LLM: Parameter Efficient Fine Tuning (PEFT) — LoRA & QLoRA — Part 2](https://abvijaykumar.medium.com/fine-tuning-llm-parameter-efficient-fine-tuning-peft-lora-qlora-part-2-d8e23877ac6f)
 - [Fine-tune Llama 2 for sentiment analysis](https://www.kaggle.com/code/lucamassaron/fine-tune-llama-2-for-sentiment-analysis/log)
 - [Fine-tune Falcon 7b LLM on Custom Dataset for Sentiment Analysis Using QLoRA.](https://ai.plainenglish.io/fine-tune-falcon-7b-llm-on-custom-dataset-for-sentiment-analysis-using-qlora-388dcfb1c7e9)
+- [Practical Tips for Finetuning LLMs Using LoRA (Low-Rank Adaptation)](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms)
 
 ### Loss function LLMs used when finetuning
 - [Language Model Training and Inference: From Concept to Code](https://cameronrwolfe.substack.com/p/language-model-training-and-inference#§understanding-next-token-prediction)
