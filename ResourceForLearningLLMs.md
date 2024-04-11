@@ -32,6 +32,7 @@
 
 ### Evaluation metric
 - [LLMs — Fine-tuning and Model Evaluation](https://ritikjain51.medium.com/llms-fine-tuning-and-evaluation-f019515b1c67)
+- [ROUGE Metrics: Evaluating Summaries in Large Language Models.](https://pub.towardsai.net/rouge-metrics-evaluating-summaries-in-large-language-models-d200ee7ca0e6)
 
 ### LLM hyperparameter tuning
 - [Tuning parameters to train LLMs (Large Language Models)](https://medium.com/@rtales/tuning-parameters-to-train-llms-large-language-models-8861bbc11971)
