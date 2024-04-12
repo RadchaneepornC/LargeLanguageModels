@@ -6,7 +6,10 @@
 - [The Novice's LLM Training Guide written by Alpin](https://rentry.org/llm-training#the-basics)
 - [Benedict Neo's Roadmap to Learn AI in 2024](https://medium.com/bitgrit-data-science-publication/a-roadmap-to-learn-ai-in-2024-cc30c6aa6e16)
 - [Thomas@HuggingFace's A little guide to building Large Language Models in 2024](https://docs.google.com/presentation/d/1IkzESdOwdmwvPxIELYJi8--K3EZ98_cL6c5ZcLKSyVg/edit#slide=id.p)
+- [Exploring Large Language Models](https://medium.com/data-science-engineering/exploring-large-language-models-8fed99a5a139)
 
+### LLM - All about theory
+- [Training and fine-tuning large language models](https://www.borealisai.com/research-blogs/training-and-fine-tuning-large-language-models/)
 
 ### Finetuning techniques
 - [Akshay Pachaar's Understanding LoRA: Low-rank Adaption of Large Language Models](https://mlspring.beehiiv.com/p/understanding-lora-lowrank-adaption-large-language-models)
@@ -23,12 +26,13 @@
 - [Fine-tune Llama 2 for sentiment analysis](https://www.kaggle.com/code/lucamassaron/fine-tune-llama-2-for-sentiment-analysis/log)
 - [Fine-tune Falcon 7b LLM on Custom Dataset for Sentiment Analysis Using QLoRA.](https://ai.plainenglish.io/fine-tune-falcon-7b-llm-on-custom-dataset-for-sentiment-analysis-using-qlora-388dcfb1c7e9)
 - [Practical Tips for Finetuning LLMs Using LoRA (Low-Rank Adaptation)](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms)
+  
 
 ### Loss function LLMs used when finetuning
 - [Language Model Training and Inference: From Concept to Code](https://cameronrwolfe.substack.com/p/language-model-training-and-inference#§understanding-next-token-prediction)
 - [What is Loss Function: LLMs Explained](https://www.chatgptguide.ai/2024/02/29/what-is-loss-function-llms-explained/)
 - [Cross Entropy in Large Language Models (LLMs)](https://medium.com/ai-assimilating-intelligence/cross-entropy-in-large-language-models-llms-4f1c842b5fca)
-
+- [How do Large Language Models learn?](https://medium.com/@jeraldteokj/visualising-loss-calculation-in-large-language-models-1af410a9d73d)
 
 ### Evaluation metric
 - [LLMs — Fine-tuning and Model Evaluation](https://ritikjain51.medium.com/llms-fine-tuning-and-evaluation-f019515b1c67)
