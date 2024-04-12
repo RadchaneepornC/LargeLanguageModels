@@ -62,6 +62,7 @@
 - [T-RAG: LESSONS FROM THE LLM TRENCHES](https://arxiv.org/pdf/2402.07483.pdf)
 - [LoRA+](https://arxiv.org/abs/2402.12354)
 - [RAFT: Adapting Language Model to Domain Specific RAG](https://arxiv.org/abs/2403.10131) <-Finetuning + RAG
+- https://www.linkedin.com/pulse/beyond-boundaries-human-like-approach-question-over-sources-lehmann-dhtne/?trackingId=XfiH5qabfTtsXuHRy%2BjA6g%3D%3D
 
 ### Source code about data preprocessing
 - [Construct dataset](https://github.com/avisoori-databricks/Tuning-the-Finetuning/blob/main/Step%200%20Constructing%20the%20dataset.py)
