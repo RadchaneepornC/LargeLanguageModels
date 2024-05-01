@@ -46,6 +46,9 @@
 ### Inference 
 - [LLM Inference on multiple GPUs with 🤗 Accelerate](https://medium.com/@geronimo7/llms-multi-gpu-inference-with-accelerate-5a8333e4c5db)
 
+### Evaluation & Deployment
+- [tensorrtllm_backend](https://github.com/triton-inference-server/tensorrtllm_backend)
+
 ### Quantization techniques
 - [Siddharth vij's LLM Quantization | GPTQ | QAT | AWQ | GGUF | GGML | PTQ ](https://medium.com/@siddharth.vij10/llm-quantization-gptq-qat-awq-gguf-ggml-ptq-2e172cd1b3b5)
 - [Maarten Grootendorst's Which Quantization Method is Right for You? (GPTQ vs. GGUF vs. AWQ)](https://www.youtube.com/watch?app=desktop&v=mNE_d-C82lI&embeds_referring_euri=https%3A%2F%2Fmaartengrootendorst.substack.com%2F&feature=emb_imp_woyt)
