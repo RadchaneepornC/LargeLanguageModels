@@ -26,6 +26,7 @@
 - [Fine-tune Llama 2 for sentiment analysis](https://www.kaggle.com/code/lucamassaron/fine-tune-llama-2-for-sentiment-analysis/log)
 - [Fine-tune Falcon 7b LLM on Custom Dataset for Sentiment Analysis Using QLoRA.](https://ai.plainenglish.io/fine-tune-falcon-7b-llm-on-custom-dataset-for-sentiment-analysis-using-qlora-388dcfb1c7e9)
 - [Practical Tips for Finetuning LLMs Using LoRA (Low-Rank Adaptation)](https://magazine.sebastianraschka.com/p/practical-tips-for-finetuning-llms)
+- [Finetuning Large Language Models: Customize Llama 3 8B For Your Needs](https://medium.com/@miloszivic99/finetuning-large-language-models-customize-llama-3-8b-for-your-needs-bfe0f43cd239)
   
 
 ### Loss function LLMs used when finetuning
