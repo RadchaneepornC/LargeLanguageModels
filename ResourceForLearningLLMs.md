@@ -9,6 +9,7 @@
 - [Exploring Large Language Models](https://medium.com/data-science-engineering/exploring-large-language-models-8fed99a5a139)
 
 ### LLM - All about theory
+- [Transformer Achitechture](https://medium.com/@amanatulla1606/transformer-architecture-explained-2c49e2257b4c)
 - [Training and fine-tuning large language models](https://www.borealisai.com/research-blogs/training-and-fine-tuning-large-language-models/)
 
 ### Finetuning techniques
