@@ -11,6 +11,7 @@
 ### LLM - All about theory
 - [Transformer Achitechture](https://medium.com/@amanatulla1606/transformer-architecture-explained-2c49e2257b4c)
 - [Training and fine-tuning large language models](https://www.borealisai.com/research-blogs/training-and-fine-tuning-large-language-models/)
+- [Solving Transformer by Hand: A Step-by-Step Math Example](https://medium.com/gitconnected/understanding-transformers-from-start-to-end-a-step-by-step-math-example-16d4e64e6eb1)
 
 ### Finetuning techniques
 - [Akshay Pachaar's Understanding LoRA: Low-rank Adaption of Large Language Models](https://mlspring.beehiiv.com/p/understanding-lora-lowrank-adaption-large-language-models)
