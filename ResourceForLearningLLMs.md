@@ -45,6 +45,7 @@
 
 ### LLM hyperparameter tuning
 - [Tuning parameters to train LLMs (Large Language Models)](https://medium.com/@rtales/tuning-parameters-to-train-llms-large-language-models-8861bbc11971)
+- [LoRA Fine-tuning & Hyperparameters Explained (in Plain English)](https://www.entrypointai.com/blog/lora-fine-tuning/)
 
 ### Inference 
 - [LLM Inference on multiple GPUs with 🤗 Accelerate](https://medium.com/@geronimo7/llms-multi-gpu-inference-with-accelerate-5a8333e4c5db)
