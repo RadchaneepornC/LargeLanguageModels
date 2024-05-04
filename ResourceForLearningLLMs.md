@@ -65,6 +65,7 @@
 - [hymie122 RAG-Survey](https://github.com/hymie122/rag-survey?fbclid=IwAR3aEDP6gqky7SBR3Whi-7PiDmcybWGAhkLkPDtBocjX3B57KcMbZX1Qax4)
 - [RAG for long context LLMs](https://youtu.be/SsHUNfhF32s?si=H9SE2IyGrOrsXg63)
 - [RAG for LLama-3 with Langchain](https://colab.research.google.com/drive/1BJYYyrPVe0_9EGyXqeNyzmVZDrCRZwsg?usp=sharing#scrollTo=Y2m2l-vt_RSp)
+- [Deep Dive into Vector Databases by Hand](https://medium.com/towards-data-science/deep-dive-into-vector-databases-by-hand-e9ab71f54f80)
 
 ### To-Read articles
 - [Don't Merge Your LoRA Adapter Into a 4-bit LLM](https://kaitchup.substack.com/p/dont-merge-your-lora-adapter-into?source=post_page-----2216ffcdc27b--------------------------------)
