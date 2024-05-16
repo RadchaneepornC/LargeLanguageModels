@@ -5,7 +5,24 @@ From my research about text evaluation metric, I would like to catagorize them i
 
 <details><summary>
   BLEU
-</summary></details>
+</summary>
+<br>
+  
+**BLEU** <img width="138" alt="image" src="https://github.com/RadchaneepornC/LargeLanguageModels/assets/100735165/f9319f48-b5ae-4eae-b85f-53bfd5a76210">
+ stands for **B**i**L**ingual **E**valuation **U**nderstudy
+- measures the similarity of the machine-translated text to a set of high quality reference
+- score is in the range of [0,1], 1.0 = perfect score
+- formula
+
+  ![Alt text](image/BLEU_formula.jpg)
+
+
+- example of calculatioon
+- tradeoffs
+- code for implementation
+
+
+</details>
 
 <details><summary>
   ROGUE
@@ -35,3 +52,7 @@ From my research about text evaluation metric, I would like to catagorize them i
 <details><summary>
 Chatbot Arena
 </summary></details>
+
+
+## Reference 
+- [BLEU: a Method for Automatic Evaluation of Machine Translation](https://aclanthology.org/P02-1040.pdf)
