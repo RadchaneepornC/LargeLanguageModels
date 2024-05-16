@@ -14,12 +14,29 @@ From my research about text evaluation metric, I would like to catagorize them i
 - **score** is in the range of [0,1], 1.0 = perfect score
 - **formula**
 
-  ![Alt text](image/BLEU_formula.jpg)
+![Alt text](image/BLEU.jpg)
 
 
 - **example of calculation**
+
+![Alt text](image/Ex_BLEU.jpg)
+
+  
 - **tradeoffs**
+
+   - **BLEU is a Corpus-based Metric:** fighting and battling are not be captured as common unigram
+   - **normalization and tokenization:** prior to computing the BLEU score, both the reference and candidate translations are normalized and tokenized. The choice of normalization and tokenization steps significantly affect the final BLEU score.
+
+
+  
 - **code for implementation**
+
+
+
+
+
+
+
 
 
 </details>
@@ -56,3 +73,4 @@ Chatbot Arena
 
 ## Reference 
 - [BLEU: a Method for Automatic Evaluation of Machine Translation](https://aclanthology.org/P02-1040.pdf)
+- [Evaluating models](https://cloud.google.com/translate/automl/docs/evaluate)
