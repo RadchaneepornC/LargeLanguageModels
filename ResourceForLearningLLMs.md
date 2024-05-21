@@ -7,6 +7,7 @@
 - [Benedict Neo's Roadmap to Learn AI in 2024](https://medium.com/bitgrit-data-science-publication/a-roadmap-to-learn-ai-in-2024-cc30c6aa6e16)
 - [Thomas@HuggingFace's A little guide to building Large Language Models in 2024](https://docs.google.com/presentation/d/1IkzESdOwdmwvPxIELYJi8--K3EZ98_cL6c5ZcLKSyVg/edit#slide=id.p)
 - [Exploring Large Language Models](https://medium.com/data-science-engineering/exploring-large-language-models-8fed99a5a139)
+- [Building LLM Applications: Serving LLMs](https://medium.com/@vipra_singh/building-llm-applications-serving-llms-part-9-68baa19cef79#5ddf)
 
 ### LLM - All about theory
 - [Transformer Achitechture](https://medium.com/@amanatulla1606/transformer-architecture-explained-2c49e2257b4c)
