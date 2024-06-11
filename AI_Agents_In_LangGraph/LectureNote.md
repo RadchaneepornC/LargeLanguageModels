@@ -3,12 +3,13 @@
 
 <details><summary>Introduction</summary> 
   <br>
-Agentic workflow that LangChain support via LangGraph (a cyclical graph define agents and their brhaviors)
+Agentic workflow that LangChain support via LangGraph (a cyclical graph define agents and their behaviors)
 
+![Alt text](https://github.com/RadchaneepornC/LargeLanguageModels/blob/main/AI_Agents_In_LangGraph/image/CyclicGraph.png)
 
-- ReAct: Reasoning and action
-- SELF-REFINE: iterative refinement that we were talking about
-- AlphaCodium: alpha coing creating coding agent using flow engineering
+- [ReAct](https://arxiv.org/pdf/2210.03629): Reasoning and action
+- [SELF-REFINE](https://arxiv.org/pdf/2303.17651): iterative refinement that we were talking about
+- [AlphaCodium](https://arxiv.org/pdf/2401.08500): alpha coing creating coding agent using flow engineering
 
 
 </details>
@@ -17,6 +18,8 @@ Agentic workflow that LangChain support via LangGraph (a cyclical graph define a
 Build an Agent from Scratch
   
 </summary>
+
+
 
 
 </details>
