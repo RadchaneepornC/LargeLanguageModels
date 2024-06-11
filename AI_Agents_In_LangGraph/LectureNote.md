@@ -150,7 +150,7 @@ known_actions = {
 }
 ```
 
-**5. **
+**5. Initialize an agent with the prompt just created**
 
 ```python
 abot = Agent(prompt)
@@ -283,6 +283,71 @@ abot.messages
 ```
 
 **6. Create loop for automating working of an agent**
+
+```python
+#Python RegEx, RegEx can be used to check if a string contains the specified search pattern
+action_re = re.compile('^Action: (\w+): (.*)$')
+
+#Compiles a regular expression pattern to match lines starting with "Action: ", followed by a word (captured as the action), a colon and a space, and then any remaining text (captured as the action input).
+```
+
+```python
+def query(question, max_turns=5):
+    i = 0
+    bot = Agent(prompt)
+    next_prompt = question
+    while i < max_turns:
+        i += 1
+        result = bot(next_prompt)
+        print(result)
+        actions = [
+            action_re.match(a) 
+            for a in result.split('\n') 
+            if action_re.match(a)
+        ]
+        if actions:
+            # There is an action to run
+            action, action_input = actions[0].groups()
+            if action not in known_actions:
+                raise Exception("Unknown action: {}: {}".format(action, action_input))
+            print(" -- running {} {}".format(action, action_input))
+            observation = known_actions[action](action_input)
+            print("Observation:", observation)
+            next_prompt = "Observation: {}".format(observation)
+        else:
+            return
+```
+
+```python
+question = """I have 2 dogs, a border collie and a scottish terrier. \
+What is their combined weight"""
+query(question)
+```
+
+```md
+Thought: I need to find the average weight of both a Border Collie and a Scottish Terrier, then sum these weights to get the combined weight of the two dogs.
+Action: average_dog_weight: Border Collie
+PAUSE
+ -- running average_dog_weight Border Collie
+Observation: a Border Collies average weight is 37 lbs
+Thought: Now I need to find the average weight of a Scottish Terrier.
+Action: average_dog_weight: Scottish Terrier
+PAUSE
+ -- running average_dog_weight Scottish Terrier
+Observation: Scottish Terriers average 20 lbs
+Thought: I now have the average weights of both dogs. I need to sum these weights to get the combined weight.
+Action: calculate: 37 + 20
+PAUSE
+ -- running calculate 37 + 20
+Observation: 57
+Answer: The combined weight of a Border Collie and a Scottish Terrier is 57 lbs.
+
+```
+
+
+
+
+
 
 
 
