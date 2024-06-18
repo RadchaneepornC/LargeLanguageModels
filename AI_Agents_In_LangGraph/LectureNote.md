@@ -94,6 +94,7 @@ class Agent:
 **3. Define prompt**
 
 ```python
+#this will use as a system message
 prompt = """
 You run in a loop of Thought, Action, PAUSE, Observation.
 At the end of the loop you output an Answer
@@ -153,11 +154,13 @@ known_actions = {
 **5. Initialize an agent with the prompt just created**
 
 ```python
+#Creating an Instance of the Agent Class named abot (__init__ Method is excecuted)
 abot = Agent(prompt)
 ```
 
 
 ```python
+#Calling an Instance of the Agent Class and assign the return value to the variable named result (__call__ Method is excecuted in this step)
 result = abot("How much does a toy poodle weigh?")
 print(result)
 ```
@@ -168,6 +171,7 @@ PAUSE
 
 
 ```python
+# the latest result return us an action we should take, the we take an action and assign the return to the result variable
 result = average_dog_weight("Toy Poodle")
 ```
 
