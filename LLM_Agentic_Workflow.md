@@ -74,13 +74,23 @@ user_proxy.initiate_chat(assistant, message="Plot a chart of NVDA and TESLA stoc
 
 - `ConversableAgent` class, list of important parameters for the ConversableAgent class are listed below:
 
-    - `system_message`: System message useful for steering core agent behaviors.
-    - `is_termination_msg`: Function to determine if a message terminates the conversation.
-    - `max_consecutive_auto_reply`: Maximum consecutive auto replies.
-    - `human_input_mode`: Determines when to request human input (e.g., always, never, or just before a task terminates).
-    - `function_map`: Mapping names to callable functions. This wraps the OpenAI tool calling functionality.
-    - `code_execution_config`: Configuration for code execution.
-    - `llm_config`: Configuration for LLM-based auto replies.
+    - `system_message`: System message useful for core agent behaviors
+    - `is_termination_msg`: Function to determine if a message terminates the conversation
+    - `max_consecutive_auto_reply`: Maximum consecutive auto replies
+    - `human_input_mode`: Determines when to request human input (e.g., always, never, or just before a task terminates)
+    - `function_map`: Mapping names to callable functions. This wraps the OpenAI tool calling functionality
+    - `code_execution_config`: Configuration for code execution
+    - `llm_config`: Configuration for LLM-based auto replies
+ 
+- `UserProxyAgent`
+  - `human_input_mode` set to `ALWAYS`
+  - `llm_config` set to `False`
+- `AssistantAgent`
+  - `human_input_mode` is set by default to `NEVER`
+- `GroupChat`
+  - An abstraction to enable groups of ConversableAgents to collaborate on a task, with some plumbing to orchestrate their interactions (e.g., determining which agent speaks/acts next), maximum rounds in a conversation, etc.
+  - GroupChat is wrapped by a GroupChatManager object which inherits from the ConversableAgent class
+  - GroupChat abstraction receives a message, it broadcasts it to all agents, selects the next speaker based on the group chat orchestration policy, enables a turn for the selected speaker, checks for termination conditions, and continues this process until a termination condition is met
 
 
 ## Granting agents access to tools
