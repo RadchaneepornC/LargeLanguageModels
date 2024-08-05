@@ -379,6 +379,29 @@ groupchat_manager =  GroupChatManager(groupchat=groupchat, llm_config=llm_config
 user_proxy.initiate_chat(groupchat_manager, message="Plan an art exhibition with the theme 'Nature and Technology'.")
 ```
 
+## Multi-Agent Orchestration Strategies
+
+this is about `speaker_selection_method` parameter in the `GroupChat` abstraction
+- **LLM Based Orchestration:** `speaker_selection_method` = `auto`,leverages large language models to determine which agent should take the next action based on the context and state of the ongoing task
+  - **Pro:** useful for complex, unstructured tasks where predefined rules may not suffice
+  - **Con:**
+    -  demands significant computational resources and the performance quality may be contingent on the capability of the LLM
+    -  risk of unpredictability as the model might produce unexpected outputs, making debugging and validation more challenging
+
+- **Sequential Orchestration:** `speaker_selection_method` = `round_robin`, This strategy involves a predefined sequential order in which agents will act (may not include loops or any conditional branching capabilities)
+  - **Pro:** simpler to debug and validate the process
+  - **Con:** can be a drawback in scenarios where the task is dynamic or interdependent. Each agent may need information from others that could be more readily available if acting out of sequence, leading to inefficiency or missed opportunities for optimization
+
+
+- **Random Orchestration:** `speaker_selection_method` = `random`, next agent to act is selected at random, This approach is typically used as a baseline for comparison with other strategies.
+  - **Pro:** be useful for tasks where the order of actions is not critical or when the task is highly parallelizable
+  - **Con:** the potential for inefficiency, as necessary steps might be delayed or skipped over in the randomness. This lack of structure can also make it difficult to track progress and debug issues, and it may lead to suboptimal use of resources as agents may end up working on irrelevant tasks or duplicating efforts
+  
+- **Graph Based Orchestration:** `speaker_selection_method` = `auto`, and a dictionary representing the orchestration graph `allowed_or_disallowed_speaker_transitions` is passed in as an argument, the developer defines a graph that encodes valid transitions between agents based on the task requirements. The graph can represent dependencies between agents, parallel actions, and termination conditions
+  - **Pro:** useful for complex tasks with multiple interdependent steps
+  - **Con:** setting up and maintaining the graph can be time-consuming, and changes to the task structure may require significant modifications to the graph
+
+
 
 </details>
 
