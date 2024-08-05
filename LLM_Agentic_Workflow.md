@@ -401,6 +401,34 @@ this is about `speaker_selection_method` parameter in the `GroupChat` abstractio
   - **Pro:** useful for complex tasks with multiple interdependent steps
   - **Con:** setting up and maintaining the graph can be time-consuming, and changes to the task structure may require significant modifications to the graph
 
+## Memory in agent
+agents can maintain memory in two ways as shown in figure below: 
+
+1. short-term memory via in-memory lists or metadata databases, typically implemented as a message history list that stores the last N messages (and actions) exchanged between agents. The history list is updated with each new message/action and is part of the prompt that is passed to the LLM model to generate agent responses.
+In AutoGen, we can simulate additions to an agent’s history object by calling their send method without requesting a reply i.e. a silent send.
+
+```py
+history = [
+    {"role": "user", "content": "What is the height of the Eiffel Tower?"},
+    {"role": "assistant", "content": "The height of the Eiffel Tower is
+324 meters."},
+]
+for message in history:
+    if message["role"] == "user":
+        user_proxy.send(message=message, request_reply=False)
+    else:
+        assistant.send(message=message, request_reply=False)
+
+#AssistantAgent will use the history list to provide a contextually relevant response to the question
+user_proxy.initiate_chat(assistant, message="When was it built?")
+```
+
+3.  long-term memory via vector databases, A common pattern adopted in implementing long term memory is retrieval augmented generation where data (across multiple modalities) is first converted to a fixed length vector representation and stored in a vector database.
+
+
+
+![Alt text](image/Agent-Memory.png)
+> Picture Reference: *Dibia, Victor, and Chi Wang. *Multi-Agent Systems with AutoGen*. Manning Publications, 2024.*
 
 
 </details>
