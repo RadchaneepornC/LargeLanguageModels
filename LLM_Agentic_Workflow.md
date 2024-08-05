@@ -1,6 +1,6 @@
-## My Lecture about Agentic Workflow with LLMs
+# My Lecture about Agentic Workflow with LLMs
 
-<details> <br> <summary> Multi-Agent Systems with AutoGen </summary>
+## 📍 Multi-Agent Systems with AutoGen 
 
 
 
@@ -382,5 +382,5 @@ user_proxy.initiate_chat(groupchat_manager, message="Plan an art exhibition with
 
 </details>
 
-</details>
+
 
