@@ -4,7 +4,17 @@
 
 
 
-Below is my summarization of **Dibia, Victor, and Chi Wang. *Multi-Agent Systems with AutoGen*. Manning Publications, 2024. https://www.manning.com/books/multi-agent-systems-with-autogen.**
+Below is my summarization about Agentic workflow with AutoGen from three resources:
+- [1] Dibia, Victor, and Chi Wang. *Multi-Agent Systems with AutoGen*. Manning Publications, 2024. https://www.manning.com/books/multi-agent-systems-with-autogen.
+
+- [2] [**Microsoft AutoGen tutorial**](https://microsoft.github.io/autogen/docs/tutorial/introduction)
+
+- [3] DeepLearning.AI. (n.d.). AI Agentic Design Patterns with AutoGen. Retrieved August 6, 2024, from https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/
+
+
+I will stucture my summarization based on resource [1]
+
+🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱
 
 <details><summary>
 1. Understanding a Multi-Agent System (MAS)</summary>
