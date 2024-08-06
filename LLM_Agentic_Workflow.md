@@ -12,7 +12,7 @@ Below is my summarization about Agentic workflow with AutoGen from three resourc
 - [3] DeepLearning.AI. (n.d.). AI Agentic Design Patterns with AutoGen. Retrieved August 6, 2024, from https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/
 
 
-I will stucture my summarization based on resource [1]
+I will structure my summarization based on resource [1]
 
 🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱
 
@@ -290,10 +290,74 @@ register_function(
 - Without a clear definition of task termination, agents may continue to exchange messages indefinitely, leading to inefficiency, resource wastage, or even incorrect task completion
 - A solved task is complete (i.e., a set of steps required to solve it have been explored) but a complete task is not necessarily solved
 - some strategies for task termination in multi-agent applications:
-  -  be instructed to output a TERMINATE string as the last word in its response when it judges the task to be complete
-  -  include custom logic that inspects task state, or may be a human-in-the-loop
+  -  be instructed to output a TERMINATE string as the last word in its response when it judges the task to be complete, `is_termination_msg` : This condition can trigger termination if the received message satisfies a particular condition, e.g., it contains the word “TERMINATE”. can customize this condition using the is_terminate_msg argument in the constructor of the ConversableAgent class.
+
+```py
+
+agent1 = ConversableAgent(
+    "agent1",
+    system_message="Your name is agent1 and you are a part of a duo of comedians.",
+    llm_config={"config_list": [{"model": "gpt-4", "temperature": 0.7, "api_key": os.environ.get("OPENAI_API_KEY")}]},
+    human_input_mode="NEVER",  # Never ask for human input.
+    is_termination_msg=lambda msg: "good bye" in msg["content"].lower(),
+)
+
+result = agent1.initiate_chat(agent2, message="agent2, tell me a joke and then say the words GOOD BYE.")
+
+```
+
+```
+agent1 (to agent2):
+
+agent2, tell me a joke and then say the words GOOD BYE.
+
+--------------------------------------------------------------------------------
+agent2 (to agent1):
+
+Why don't scientists trust atoms?
+
+Because they make up everything!
+
+GOOD BYE!
+
+--------------------------------------------------------------------------------
+```
+
+ 
   -  configuring rules that terminate the conversation after some set budget of resources has elapsed e.g., number of messages exchanged, time elapsed, LLM tokens consumed etc. This strategy is useful when the task is expected to be completed within a certain budget of resources and exceeding this budget is representative of a potential failure mode.
-    - `max_consecutive_auto_reply` parameter that specifies the maximum number of consecutive auto-replies an agent can generate before the task is automatically terminated.
+    -  used the `max_turns` parameter to limit the number of turns
+   
+```py
+
+      result = agent1.initiate_chat(agent2, message="agent2, tell me a joke.", max_turns=2)
+
+      # agent1 --> agent2, agent2 --> agent1, agent1 --> agent2, agent2 --> agent1
+```
+
+
+   - `max_consecutive_auto_reply` parameter that specifies the maximum number of times the sender can reply
+
+
+```py
+
+    agent1 = ConversableAgent(
+    "agent1",
+    system_message="Your name is Joe and you are a part of a duo of comedians.",
+    llm_config={"config_list": [{"model": "gpt-4", "temperature": 0.7, "api_key": os.environ.get("OPENAI_API_KEY")}]},
+    human_input_mode="NEVER",  # Never ask for human input.
+    max_consecutive_auto_reply=1,  # Limit the number of consecutive auto-replies.
+)
+
+result = agent1.initiate_chat(agent2, message="agent1, tell me a joke.")
+
+# agent1 --> agent2, agent2 --> agent1, agent1 --> agent2, agent2 --> agent1 (agent1 can reply once, not include initial chat)
+
+```
+
+ -  include custom logic that inspects task state, or may be a human-in-the-loop, for this The actual termination depends on the `human_input_mode` argument of the ConversableAgent class.
+      - when mode is `NEVER` the termination conditions above will end the conversations
+      - when mode is `ALWAYS` or `TERMINATE` , it will not terminate immediately
+   
  
 ## Beyond Two Agents - Orchestrating Teams of Agents
 
