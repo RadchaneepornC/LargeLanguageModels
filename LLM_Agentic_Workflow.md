@@ -170,7 +170,12 @@ In this case, if want to use Thai LLM such as Typhoon1.5, scripts should be as b
 
 ```py
 llm_config = {
-    "config_list": [{"model": "typhoon-v1.5x-70b-instruct", "api_key": "put_you_api_here" ,"base_url": 'https://api.opentyphoon.ai/v1' }]
+    "config_list": [{"model": "typhoon-v1.5x-70b-instruct",
+                    "api_key": "put_you_api_here" ,
+                    "base_url": 'https://api.opentyphoon.ai/v1'
+                    }],
+    "temperature": 0.9,
+    "timeout": 300,
 }
 assistant = AssistantAgent(
     name= "assistant", llm_config=llm_config)
