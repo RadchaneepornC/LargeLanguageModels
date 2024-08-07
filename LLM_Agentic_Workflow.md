@@ -510,6 +510,300 @@ user_proxy.initiate_chat(assistant, message="When was it built?")
 > Picture Reference: *Dibia, Victor, and Chi Wang. *Multi-Agent Systems with AutoGen*. Manning Publications, 2024.*
 
 
+## Allowing Human Feedback in Agents
+
+![Alt text](image/human_in_agent.png)
+
+> Microsoft. (n.d.). Allowing Human Feedback in Agents. Retrieved August 6, 2024, from https://microsoft.github.io/autogen/docs/tutorial/human-in-the-loop
+
+**The mode is specified through the `human_input_mode` argument of the ConversableAgent. The three modes are:**
+
+- `NEVER` : human input is never requested, the termination conditions(message-based termination condition) are used to terminate. This mode is useful when you want your agents to act fully autonomously
+
+**Example**
+
+```py
+
+import os
+
+from autogen import ConversableAgent
+
+agent_with_number = ConversableAgent(
+    "agent_with_number",
+    system_message="You are playing a game of guess-my-number. You have the "
+    "number 53 in your mind, and I will try to guess it. "
+    "If I guess too high, say 'too high', if I guess too low, say 'too low'. ",
+    llm_config={"config_list": [{"model": "gpt-4", "api_key": os.environ["OPENAI_API_KEY"]}]},
+    is_termination_msg=lambda msg: "53" in msg["content"],  # terminate if the number is guessed by the other agent
+    human_input_mode="NEVER",  # never ask for human input
+)
+
+agent_guess_number = ConversableAgent(
+    "agent_guess_number",
+    system_message="I have a number in my mind, and you will try to guess it. "
+    "If I say 'too high', you should guess a lower number. If I say 'too low', "
+    "you should guess a higher number. ",
+    llm_config={"config_list": [{"model": "gpt-4", "api_key": os.environ["OPENAI_API_KEY"]}]},
+    human_input_mode="NEVER",
+)
+
+result = agent_with_number.initiate_chat(
+    agent_guess_number,
+    message="I have a number between 1 and 100. Guess it!",
+)
+```
+```agent_with_number (to agent_guess_number):
+
+I have a number between 1 and 100. Guess it!
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 50?
+
+--------------------------------------------------------------------------------
+agent_with_number (to agent_guess_number):
+
+Too low.
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 75?
+
+--------------------------------------------------------------------------------
+agent_with_number (to agent_guess_number):
+
+Too high.
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 63?
+
+--------------------------------------------------------------------------------
+agent_with_number (to agent_guess_number):
+
+Too high.
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 57?
+
+--------------------------------------------------------------------------------
+agent_with_number (to agent_guess_number):
+
+Too high.
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 54?
+
+--------------------------------------------------------------------------------
+agent_with_number (to agent_guess_number):
+
+Too high.
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 52?
+
+--------------------------------------------------------------------------------
+agent_with_number (to agent_guess_number):
+
+Too low.
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 53?
+
+--------------------------------------------------------------------------------
+```
+  
+- `TERMINATE` (default): human input is only requested when a termination condition is met. Note that in this mode if the human chooses to intercept and reply, the conversation continues and the counter used by max_consecutive_auto_reply is reset.
+
+**Ex** playing the same game again, but this time the guessing agent will only have two chances to guess the number, and if it fails, the human will be asked to provide feedback, and the guessing agent gets two more chances. If the correct number is guessed eventually, the conversation will be terminated.
+
+```py
+agent_with_number = ConversableAgent(
+    "agent_with_number",
+    system_message="You are playing a game of guess-my-number. "
+    "In the first game, you have the "
+    "number 53 in your mind, and I will try to guess it. "
+    "If I guess too high, say 'too high', if I guess too low, say 'too low'. ",
+    llm_config={"config_list": [{"model": "gpt-4", "api_key": os.environ["OPENAI_API_KEY"]}]},
+    max_consecutive_auto_reply=1,  # maximum number of consecutive auto-replies before asking for human input
+    is_termination_msg=lambda msg: "53" in msg["content"],  # terminate if the number is guessed by the other agent
+    human_input_mode="TERMINATE",  # ask for human input until the game is terminated
+)
+
+agent_guess_number = ConversableAgent(
+    "agent_guess_number",
+    system_message="I have a number in my mind, and you will try to guess it. "
+    "If I say 'too high', you should guess a lower number. If I say 'too low', "
+    "you should guess a higher number. ",
+    llm_config={"config_list": [{"model": "gpt-4", "api_key": os.environ["OPENAI_API_KEY"]}]},
+    human_input_mode="NEVER",
+)
+
+result = agent_with_number.initiate_chat(
+    agent_guess_number,
+    message="I have a number between 1 and 100. Guess it!",
+)
+```
+
+```
+agent_with_number (to agent_guess_number):
+
+I have a number between 1 and 100. Guess it!
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 50?
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> USING AUTO REPLY...
+agent_with_number (to agent_guess_number):
+
+Too low.
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 75?
+
+--------------------------------------------------------------------------------
+agent_with_number (to agent_guess_number):
+
+It is too high my friend. 
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 60?
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> USING AUTO REPLY...
+agent_with_number (to agent_guess_number):
+
+Too high.
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 55?
+
+--------------------------------------------------------------------------------
+agent_with_number (to agent_guess_number):
+
+still too high, but you are very close.
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 52?
+
+--------------------------------------------------------------------------------
+
+>>>>>>>> USING AUTO REPLY...
+agent_with_number (to agent_guess_number):
+
+Too low.
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 54?
+
+--------------------------------------------------------------------------------
+agent_with_number (to agent_guess_number):
+
+Almost there! 
+
+--------------------------------------------------------------------------------
+agent_guess_number (to agent_with_number):
+
+Is it 53?
+
+--------------------------------------------------------------------------------
+```
+Each time after one auto-reply from the agent with the number, the human was asked to provide feedback. as you can see on these messages from human
+- When the agent guessed “74”, the human said “It is too high my friend.”
+- When the agent guessed “55”, the human said “still too high, but you are very close.”
+- When the agent guessed “54”, the human said “Almost there!”
+
+Once the human provided feedback, the counter was reset. The conversation was terminated after the agent correctly guessed “53”.
+
+
+
+
+- `ALWAYS` : human input is always requested and the human can choose to skip and trigger an auto-reply, intercept and provide feedback, or terminate the conversation. Note that in this mode termination based on `max_consecutive_auto_reply` is ignored.
+
+```py
+human_proxy = ConversableAgent(
+    "human_proxy",
+    llm_config=False,  # no LLM used for human proxy
+    human_input_mode="ALWAYS",  # always ask for human input
+)
+
+# Start a chat with the agent with number with an initial guess.
+result = human_proxy.initiate_chat(
+    agent_with_number,  # this is the same agent with the number as before
+    message="10",
+)
+```
+
+```
+human_proxy (to agent_with_number):
+
+10
+
+--------------------------------------------------------------------------------
+agent_with_number (to human_proxy):
+
+Too low.
+
+--------------------------------------------------------------------------------
+human_proxy (to agent_with_number):
+
+79
+
+--------------------------------------------------------------------------------
+agent_with_number (to human_proxy):
+
+Too high.
+
+--------------------------------------------------------------------------------
+human_proxy (to agent_with_number):
+
+76
+
+--------------------------------------------------------------------------------
+agent_with_number (to human_proxy):
+
+Too high.
+
+--------------------------------------------------------------------------------
+human_proxy (to agent_with_number):
+
+I give up
+
+--------------------------------------------------------------------------------
+agent_with_number (to human_proxy):
+
+That's okay! The number I was thinking of was 53.
+
+--------------------------------------------------------------------------------
+```
+
+
 </details>
 
 
