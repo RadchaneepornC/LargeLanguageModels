@@ -12,7 +12,6 @@ Below is my summarization about Agentic workflow with AutoGen from three resourc
 - [3] DeepLearning.AI. (n.d.). AI Agentic Design Patterns with AutoGen. Retrieved August 6, 2024, from https://www.deeplearning.ai/short-courses/ai-agentic-design-patterns-with-autogen/
 
 
-I will structure my summarization based on resource [1]
 
 🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱🌱
 
@@ -853,6 +852,14 @@ That's okay! The number I was thinking of was 53.
 
 --------------------------------------------------------------------------------
 ```
+
+
+</details>
+
+<details><summary>
+3. Agent with Code Executors</summary>
+
+
 
 
 </details>
